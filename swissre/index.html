@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Running Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+<div id="root">
+    <img src="img/bg-swing.png" alt="" class="hero-image">
+    <div class="main-content">
+        <h1>Type your tracking code</h1>
+        <p>Generate your tracking code and type it to your child’s wearable device</p>
+        <div v-if="codebool">
+            <button class="code-submit" v-on:click="submitCode">Go tracking</button>
+        </div>
+        <div v-else>
+            <input type="text" class="code" v-model="code">
+            <button class="code-submit" v-on:click="submitCode">Submit code</button>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="bundles/bootstrap.min.js"></script>
+<script src="bundles/bundle.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPMO6YgKVO05IKUz4SYv1_chOp5zc65bc&&libraries=geometry,drawing&callback=App.initMapVue">
+</script>
+</body>
+</html>

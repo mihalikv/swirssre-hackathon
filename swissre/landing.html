@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Running Monster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+<div id="root">
+    <div id="map"></div>
+    <a class="code-submit code-submit--back" href="index.html">Stop tracking</a>
+    <div class="status">
+        <img src="img/smiel.png" alt="smile" style="width: auto">
+        <div class="bar" :style="{width: 'calc(' + battery + '% - 60px)'}"></div>
+    </div>
+    <!--<input type="text" v-model="risk.area">-->
+    <!--<input type="text" v-model="risk.edge">-->
+    <!--<input type="text" v-model="distance">-->
+    <!-- Modal -->
+    <div id="myModal" class="modal fade notification" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <header>
+                        <i class="icon-warning"  :class="{ 'error': notification.error }"></i>
+                        <h2 class="warning" :class="{ 'error': notification.error }">warning</h2>
+                    </header>
+                    <span class="message">{{ notification.message }}</span>
+                    <button type="button" class="code-submit code-submit--warning"  :class="{ 'code-submit--error': notification.error }" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="bundles/bootstrap.min.js"></script>
+<script src="bundles/bundle.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPMO6YgKVO05IKUz4SYv1_chOp5zc65bc&&libraries=geometry,drawing&callback=App.initMapVue">
+</script>
+</body>
+</html>

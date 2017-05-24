@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/Avenir-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/Avenir-Roman.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+$error: #ff2300;
+
+.body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
+.main-content {
+    margin: 0 35px;
+    position: relative;
+    top: -70px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.code {
+    border: 0;
+    width: 100%;
+    border-bottom: 1px solid #7d7da4;
+    font-size: 24px;
+    font-family: 'Avenir';
+}
+
+.code-submit {
+    width: 100%;
+    height: 60px;
+    background-color: #d0f8ff;
+    font-size: 15px;
+    font-weight: 900;
+    font-family: 'Avenir';
+    border: 0;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: #2f008e;
+    margin-top: 25px;
+    line-height: 60px;
+    text-align: center;
+    &--back {
+        margin: 0;
+        position: absolute;
+        bottom: 30px;
+        width: 75%;
+    }
+    &--warning {
+        background-color: #ff9000;
+        color: white;
+    }
+    &--error {
+        background: $error;
+    }
+}
+
+.modal-dialog {
+    margin: 35px;
+}
+
+.modal-content {
+    border: 0;
+}
+
+.modal-body {
+    border: 0;
+    padding: 25px;
+    text-align: center;
+    header {
+        margin-bottom: 15px;
+    }
+}
+
+h1, h2 {
+    font-family: 'Avenir';
+    font-size: 36px;
+    font-weight: 900;
+    color: #2f008e;
+}
+
+h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.icon-warning {
+    width: 35px;
+    height: 35px;
+    background: #ff9000;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right: 5px;
+    &:after {
+        content: '!';
+        color: white;
+        display: inline-block;
+        font-family: 'Avenir';
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 35px;
+        font-style: normal;
+        vertical-align: middle;
+        text-align: center;
+    }
+    &.error {
+        background: $error;
+    }
+}
+
+.warning {
+    color: #ff9000;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0;
+    &.error {
+        color: $error;
+    }
+}
+
+.status {
+    position: absolute;
+    left: 15px;
+    top: 60px;
+    width: 150px;
+    img {
+        height: 30px;
+        margin-right: 20px;
+        display: inline-block;
+    }
+    .bar {
+        height: 15px;
+        display: inline-block;
+        vertical-align: middle;
+        &:after {
+            content: '';
+            display: block;
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, red), color-stop(50%, yellow), color-stop(100%, lime));
+            width: 90px;
+            height: 100%;
+        }
+    }
+}
+
+p {
+    font-size: 15px;
+    font-family: 'Avenir';
+    font-weight: 400;
+    color: #7d7da4;
+}
